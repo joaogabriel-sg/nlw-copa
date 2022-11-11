@@ -50,7 +50,7 @@ export async function pollRoutes(fastify: FastifyInstance) {
   });
 
   fastify.post(
-    "/pools/join",
+    "/polls/join",
     { onRequest: [authenticate] },
     async (request, reply) => {
       const joinPollBody = z.object({

@@ -1,13 +1,13 @@
 import { Heading, HStack, Text, VStack } from "native-base";
 
-import { PoolPros } from "./PoolCard";
+import { PollCardProps } from "./PollCard";
 import { Participants } from "./Participants";
 
 interface Props {
-  data: PoolPros;
+  data: PollCardProps;
 }
 
-export function PoolHeader({ data }: Props) {
+export function PollHeader({ data }: Props) {
   return (
     <HStack
       w="full"
@@ -37,8 +37,8 @@ export function PoolHeader({ data }: Props) {
       </VStack>
 
       <Participants
-        count={data._count?.participants}
-        participants={data.participants}
+        count={data._count?.participant}
+        participants={data.participant}
       />
     </HStack>
   );
